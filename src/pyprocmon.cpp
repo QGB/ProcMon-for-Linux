@@ -31,21 +31,21 @@ std::string gengine_Initialize() {
 }    
 int add(int i, int j) {
 
-    MockTrace trace;
+    static MockTrace trace;
     trace.userIPs = {10, 20, 40};
-    trace.userSymbols = {"testSymbol1", "testSymbol2", "testSymbol3"};
+    trace.userSymbols = {"testSymbol1", "testSymbol2", "testSymbol3"};//加了 static ，就没有 double free or corruption (!prev)
 
-    // MockTelemetry telemetry {
-    //     .pid = 23577,
-    //     .stackTrace = trace,
-    //     .comm = "",
-    //     .processName = "Process",
-    //     .syscall = "qgb_syscall",
-    //     .result = -1,
-    //     .duration = 0,
-    //     .arguments = (unsigned char *)"storeOneItem arguments",
-    //     .timestamp = 0
-    // };
+    MockTelemetry telemetry {
+        .pid = 23577,
+        .stackTrace = trace,
+        .comm = "",
+        .processName = "Process",
+        .syscall = "qgb_syscall",
+        .result = -1,
+        .duration = 0,
+        .arguments = (unsigned char *)"storeOneItem arguments",
+        .timestamp = 0
+    };
 	
 	
 	// static 
