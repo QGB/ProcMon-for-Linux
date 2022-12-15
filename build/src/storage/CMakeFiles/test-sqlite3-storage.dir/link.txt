@@ -1,0 +1,1 @@
+/usr/bin/c++  -g -fno-omit-frame-pointer -DELPP_THREAD_SAFE -D ELPP_DEFAULT_LOG_FILE='"/var/log/procmon.log"' "CMakeFiles/test-sqlite3-storage.dir/test_sqlite3_storage_engine.cpp.o" -o test-sqlite3-storage  libstorage-static.a ../logging/liblogging-static.a ../../libsqlite3-static.a -ldl -lpthread 

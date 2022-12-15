@@ -1,0 +1,2 @@
+/usr/bin/ar qc libstorage-static.a "CMakeFiles/storage-static.dir/mock_storage_engine.cpp.o" "CMakeFiles/storage-static.dir/sqlite3_storage_engine.cpp.o" "CMakeFiles/storage-static.dir/storage_proxy.cpp.o"
+/usr/bin/ranlib libstorage-static.a

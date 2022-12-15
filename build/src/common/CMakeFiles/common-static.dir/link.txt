@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcommon-static.a "CMakeFiles/common-static.dir/printable.cpp.o" "CMakeFiles/common-static.dir/cli_utils.cpp.o"
+/usr/bin/ranlib libcommon-static.a

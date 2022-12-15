@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-subbuild/CMakeFiles/bcc-populate"
+		},
+		{
+			"file" : "/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-subbuild/CMakeFiles/bcc-populate.rule"
+		},
+		{
+			"file" : "/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-subbuild/CMakeFiles/bcc-populate-complete.rule"
+		},
+		{
+			"file" : "/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-subbuild/bcc-populate-prefix/src/bcc-populate-stamp/bcc-populate-build.rule"
+		},
+		{
+			"file" : "/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-subbuild/bcc-populate-prefix/src/bcc-populate-stamp/bcc-populate-configure.rule"
+		},
+		{
+			"file" : "/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-subbuild/bcc-populate-prefix/src/bcc-populate-stamp/bcc-populate-download.rule"
+		},
+		{
+			"file" : "/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-subbuild/bcc-populate-prefix/src/bcc-populate-stamp/bcc-populate-install.rule"
+		},
+		{
+			"file" : "/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-subbuild/bcc-populate-prefix/src/bcc-populate-stamp/bcc-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-subbuild/bcc-populate-prefix/src/bcc-populate-stamp/bcc-populate-patch.rule"
+		},
+		{
+			"file" : "/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-subbuild/bcc-populate-prefix/src/bcc-populate-stamp/bcc-populate-test.rule"
+		},
+		{
+			"file" : "/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-subbuild/bcc-populate-prefix/src/bcc-populate-stamp/bcc-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bcc-populate"
+		],
+		"name" : "bcc-populate"
+	}
+}

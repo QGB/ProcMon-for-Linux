@@ -1,0 +1,6 @@
+#ifndef LIBBCC_VERSION_H
+#define LIBBCC_VERSION_H
+
+#define LIBBCC_VERSION "128-NOTFOUND-c75bf1b8"
+
+#endif

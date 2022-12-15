@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblogging-static.a "CMakeFiles/logging-static.dir/easylogging++.cc.o"
+/usr/bin/ranlib liblogging-static.a

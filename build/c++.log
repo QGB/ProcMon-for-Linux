@@ -1,0 +1,242 @@
+In file included from /home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPF.h:25:0,
+                 from /home/qgb/github/ProcMon-for-Linux/src/tracer/ebpf/ebpf_tracer_engine.h:6,
+                 from /home/qgb/github/ProcMon-for-Linux/src/tracer/ebpf/ebpf_tracer_engine.cpp:4:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h: In constructor ‘ebpf::BPFQueueStackTable<ValueType>::BPFQueueStackTable(const ebpf::TableDesc&)’:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:169:22: error: ‘BPF_MAP_TYPE_QUEUE’ was not declared in this scope
+     if (desc.type != BPF_MAP_TYPE_QUEUE &&
+                      ^~~~~~~~~~~~~~~~~~
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:169:22: note: suggested alternative: ‘BPF_MAP_TYPE_CPUMAP’
+     if (desc.type != BPF_MAP_TYPE_QUEUE &&
+                      ^~~~~~~~~~~~~~~~~~
+                      BPF_MAP_TYPE_CPUMAP
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:170:22: error: ‘BPF_MAP_TYPE_STACK’ was not declared in this scope
+         desc.type != BPF_MAP_TYPE_STACK)
+                      ^~~~~~~~~~~~~~~~~~
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:170:22: note: suggested alternative: ‘BPF_MAP_TYPE_HASH’
+         desc.type != BPF_MAP_TYPE_STACK)
+                      ^~~~~~~~~~~~~~~~~~
+                      BPF_MAP_TYPE_HASH
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h: At global scope:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:392:54: error: field ‘trace’ has incomplete type ‘bpf_stack_build_id [127]’
+   struct bpf_stack_build_id trace[BPF_MAX_STACK_DEPTH];
+                                                      ^
+In file included from /home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:30:0,
+                 from /home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPF.h:25,
+                 from /home/qgb/github/ProcMon-for-Linux/src/tracer/ebpf/ebpf_tracer_engine.h:6,
+                 from /home/qgb/github/ProcMon-for-Linux/src/tracer/ebpf/ebpf_tracer_engine.cpp:4:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/bcc_syms.h:81:38: note: forward declaration of ‘struct bpf_stack_build_id’
+                               struct bpf_stack_build_id *trace,
+                                      ^~~~~~~~~~~~~~~~~~
+In file included from /home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPF.h:25:0,
+                 from /home/qgb/github/ProcMon-for-Linux/src/tracer/ebpf/ebpf_tracer_engine.h:6,
+                 from /home/qgb/github/ProcMon-for-Linux/src/tracer/ebpf/ebpf_tracer_engine.cpp:4:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h: In constructor ‘ebpf::BPFSkStorageTable<ValueType>::BPFSkStorageTable(const ebpf::TableDesc&)’:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:509:22: error: ‘BPF_MAP_TYPE_SK_STORAGE’ was not declared in this scope
+     if (desc.type != BPF_MAP_TYPE_SK_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:509:22: note: suggested alternative: ‘BPF_MAP_TYPE_STACK_TRACE’
+     if (desc.type != BPF_MAP_TYPE_SK_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~
+                      BPF_MAP_TYPE_STACK_TRACE
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h: In constructor ‘ebpf::BPFCgStorageTable<ValueType>::BPFCgStorageTable(const ebpf::TableDesc&)’:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:538:22: error: ‘BPF_MAP_TYPE_CGROUP_STORAGE’ was not declared in this scope
+     if (desc.type != BPF_MAP_TYPE_CGROUP_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:538:22: note: suggested alternative: ‘BPF_MAP_TYPE_CGROUP_ARRAY’
+     if (desc.type != BPF_MAP_TYPE_CGROUP_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      BPF_MAP_TYPE_CGROUP_ARRAY
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h: In constructor ‘ebpf::BPFPercpuCgStorageTable<ValueType>::BPFPercpuCgStorageTable(const ebpf::TableDesc&)’:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:564:22: error: ‘BPF_MAP_TYPE_PERCPU_CGROUP_STORAGE’ was not declared in this scope
+     if (desc.type != BPF_MAP_TYPE_PERCPU_CGROUP_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:564:22: note: suggested alternative: ‘BPF_MAP_TYPE_PERCPU_ARRAY’
+     if (desc.type != BPF_MAP_TYPE_PERCPU_CGROUP_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      BPF_MAP_TYPE_PERCPU_ARRAY
+In file included from /home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPF.h:25:0,
+                 from /home/qgb/github/ProcMon-for-Linux/src/configuration/../tracer/ebpf/ebpf_tracer_engine.h:6,
+                 from /home/qgb/github/ProcMon-for-Linux/src/configuration/procmon_configuration.h:21,
+                 from /home/qgb/github/ProcMon-for-Linux/src/configuration/procmon_configuration.cpp:4:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h: In constructor ‘ebpf::BPFQueueStackTable<ValueType>::BPFQueueStackTable(const ebpf::TableDesc&)’:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:169:22: error: ‘BPF_MAP_TYPE_QUEUE’ was not declared in this scope
+     if (desc.type != BPF_MAP_TYPE_QUEUE &&
+                      ^~~~~~~~~~~~~~~~~~
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:169:22: note: suggested alternative: ‘BPF_MAP_TYPE_CPUMAP’
+     if (desc.type != BPF_MAP_TYPE_QUEUE &&
+                      ^~~~~~~~~~~~~~~~~~
+                      BPF_MAP_TYPE_CPUMAP
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:170:22: error: ‘BPF_MAP_TYPE_STACK’ was not declared in this scope
+         desc.type != BPF_MAP_TYPE_STACK)
+                      ^~~~~~~~~~~~~~~~~~
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:170:22: note: suggested alternative: ‘BPF_MAP_TYPE_HASH’
+         desc.type != BPF_MAP_TYPE_STACK)
+                      ^~~~~~~~~~~~~~~~~~
+                      BPF_MAP_TYPE_HASH
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h: At global scope:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:392:54: error: field ‘trace’ has incomplete type ‘bpf_stack_build_id [127]’
+   struct bpf_stack_build_id trace[BPF_MAX_STACK_DEPTH];
+                                                      ^
+In file included from /home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:30:0,
+                 from /home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPF.h:25,
+                 from /home/qgb/github/ProcMon-for-Linux/src/configuration/../tracer/ebpf/ebpf_tracer_engine.h:6,
+                 from /home/qgb/github/ProcMon-for-Linux/src/configuration/procmon_configuration.h:21,
+                 from /home/qgb/github/ProcMon-for-Linux/src/configuration/procmon_configuration.cpp:4:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/bcc_syms.h:81:38: note: forward declaration of ‘struct bpf_stack_build_id’
+                               struct bpf_stack_build_id *trace,
+                                      ^~~~~~~~~~~~~~~~~~
+In file included from /home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPF.h:25:0,
+                 from /home/qgb/github/ProcMon-for-Linux/src/configuration/../tracer/ebpf/ebpf_tracer_engine.h:6,
+                 from /home/qgb/github/ProcMon-for-Linux/src/configuration/procmon_configuration.h:21,
+                 from /home/qgb/github/ProcMon-for-Linux/src/configuration/procmon_configuration.cpp:4:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h: In constructor ‘ebpf::BPFSkStorageTable<ValueType>::BPFSkStorageTable(const ebpf::TableDesc&)’:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:509:22: error: ‘BPF_MAP_TYPE_SK_STORAGE’ was not declared in this scope
+     if (desc.type != BPF_MAP_TYPE_SK_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:509:22: note: suggested alternative: ‘BPF_MAP_TYPE_STACK_TRACE’
+     if (desc.type != BPF_MAP_TYPE_SK_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~
+                      BPF_MAP_TYPE_STACK_TRACE
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h: In constructor ‘ebpf::BPFCgStorageTable<ValueType>::BPFCgStorageTable(const ebpf::TableDesc&)’:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:538:22: error: ‘BPF_MAP_TYPE_CGROUP_STORAGE’ was not declared in this scope
+     if (desc.type != BPF_MAP_TYPE_CGROUP_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:538:22: note: suggested alternative: ‘BPF_MAP_TYPE_CGROUP_ARRAY’
+     if (desc.type != BPF_MAP_TYPE_CGROUP_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      BPF_MAP_TYPE_CGROUP_ARRAY
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h: In constructor ‘ebpf::BPFPercpuCgStorageTable<ValueType>::BPFPercpuCgStorageTable(const ebpf::TableDesc&)’:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:564:22: error: ‘BPF_MAP_TYPE_PERCPU_CGROUP_STORAGE’ was not declared in this scope
+     if (desc.type != BPF_MAP_TYPE_PERCPU_CGROUP_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:564:22: note: suggested alternative: ‘BPF_MAP_TYPE_PERCPU_ARRAY’
+     if (desc.type != BPF_MAP_TYPE_PERCPU_CGROUP_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      BPF_MAP_TYPE_PERCPU_ARRAY
+In file included from /home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPF.h:25:0,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/../configuration/../tracer/ebpf/ebpf_tracer_engine.h:6,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/../configuration/procmon_configuration.h:21,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/event_formatter.h:12,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/screen.h:23,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/screen.cpp:4:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h: In constructor ‘ebpf::BPFQueueStackTable<ValueType>::BPFQueueStackTable(const ebpf::TableDesc&)’:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:169:22: error: ‘BPF_MAP_TYPE_QUEUE’ was not declared in this scope
+     if (desc.type != BPF_MAP_TYPE_QUEUE &&
+                      ^~~~~~~~~~~~~~~~~~
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:169:22: note: suggested alternative: ‘BPF_MAP_TYPE_CPUMAP’
+     if (desc.type != BPF_MAP_TYPE_QUEUE &&
+                      ^~~~~~~~~~~~~~~~~~
+                      BPF_MAP_TYPE_CPUMAP
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:170:22: error: ‘BPF_MAP_TYPE_STACK’ was not declared in this scope
+         desc.type != BPF_MAP_TYPE_STACK)
+                      ^~~~~~~~~~~~~~~~~~
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:170:22: note: suggested alternative: ‘BPF_MAP_TYPE_HASH’
+         desc.type != BPF_MAP_TYPE_STACK)
+                      ^~~~~~~~~~~~~~~~~~
+                      BPF_MAP_TYPE_HASH
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h: At global scope:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:392:54: error: field ‘trace’ has incomplete type ‘bpf_stack_build_id [127]’
+   struct bpf_stack_build_id trace[BPF_MAX_STACK_DEPTH];
+                                                      ^
+In file included from /home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:30:0,
+                 from /home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPF.h:25,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/../configuration/../tracer/ebpf/ebpf_tracer_engine.h:6,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/../configuration/procmon_configuration.h:21,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/event_formatter.h:12,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/screen.h:23,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/screen.cpp:4:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/bcc_syms.h:81:38: note: forward declaration of ‘struct bpf_stack_build_id’
+                               struct bpf_stack_build_id *trace,
+                                      ^~~~~~~~~~~~~~~~~~
+In file included from /home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPF.h:25:0,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/../configuration/../tracer/ebpf/ebpf_tracer_engine.h:6,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/../configuration/procmon_configuration.h:21,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/event_formatter.h:12,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/screen.h:23,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/screen.cpp:4:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h: In constructor ‘ebpf::BPFSkStorageTable<ValueType>::BPFSkStorageTable(const ebpf::TableDesc&)’:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:509:22: error: ‘BPF_MAP_TYPE_SK_STORAGE’ was not declared in this scope
+     if (desc.type != BPF_MAP_TYPE_SK_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:509:22: note: suggested alternative: ‘BPF_MAP_TYPE_STACK_TRACE’
+     if (desc.type != BPF_MAP_TYPE_SK_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~
+                      BPF_MAP_TYPE_STACK_TRACE
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h: In constructor ‘ebpf::BPFCgStorageTable<ValueType>::BPFCgStorageTable(const ebpf::TableDesc&)’:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:538:22: error: ‘BPF_MAP_TYPE_CGROUP_STORAGE’ was not declared in this scope
+     if (desc.type != BPF_MAP_TYPE_CGROUP_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:538:22: note: suggested alternative: ‘BPF_MAP_TYPE_CGROUP_ARRAY’
+     if (desc.type != BPF_MAP_TYPE_CGROUP_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      BPF_MAP_TYPE_CGROUP_ARRAY
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h: In constructor ‘ebpf::BPFPercpuCgStorageTable<ValueType>::BPFPercpuCgStorageTable(const ebpf::TableDesc&)’:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:564:22: error: ‘BPF_MAP_TYPE_PERCPU_CGROUP_STORAGE’ was not declared in this scope
+     if (desc.type != BPF_MAP_TYPE_PERCPU_CGROUP_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:564:22: note: suggested alternative: ‘BPF_MAP_TYPE_PERCPU_ARRAY’
+     if (desc.type != BPF_MAP_TYPE_PERCPU_CGROUP_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      BPF_MAP_TYPE_PERCPU_ARRAY
+In file included from /home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPF.h:25:0,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/../configuration/../tracer/ebpf/ebpf_tracer_engine.h:6,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/../configuration/procmon_configuration.h:21,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/event_formatter.h:12,
+                 from /home/qgb/github/ProcMon-for-Linux/src/qgb.cpp:13:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h: In constructor ‘ebpf::BPFQueueStackTable<ValueType>::BPFQueueStackTable(const ebpf::TableDesc&)’:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:169:22: error: ‘BPF_MAP_TYPE_QUEUE’ was not declared in this scope
+     if (desc.type != BPF_MAP_TYPE_QUEUE &&
+                      ^~~~~~~~~~~~~~~~~~
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:169:22: note: suggested alternative: ‘BPF_MAP_TYPE_CPUMAP’
+     if (desc.type != BPF_MAP_TYPE_QUEUE &&
+                      ^~~~~~~~~~~~~~~~~~
+                      BPF_MAP_TYPE_CPUMAP
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:170:22: error: ‘BPF_MAP_TYPE_STACK’ was not declared in this scope
+         desc.type != BPF_MAP_TYPE_STACK)
+                      ^~~~~~~~~~~~~~~~~~
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:170:22: note: suggested alternative: ‘BPF_MAP_TYPE_HASH’
+         desc.type != BPF_MAP_TYPE_STACK)
+                      ^~~~~~~~~~~~~~~~~~
+                      BPF_MAP_TYPE_HASH
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h: At global scope:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:392:54: error: field ‘trace’ has incomplete type ‘bpf_stack_build_id [127]’
+   struct bpf_stack_build_id trace[BPF_MAX_STACK_DEPTH];
+                                                      ^
+In file included from /home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:30:0,
+                 from /home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPF.h:25,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/../configuration/../tracer/ebpf/ebpf_tracer_engine.h:6,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/../configuration/procmon_configuration.h:21,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/event_formatter.h:12,
+                 from /home/qgb/github/ProcMon-for-Linux/src/qgb.cpp:13:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/bcc_syms.h:81:38: note: forward declaration of ‘struct bpf_stack_build_id’
+                               struct bpf_stack_build_id *trace,
+                                      ^~~~~~~~~~~~~~~~~~
+In file included from /home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPF.h:25:0,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/../configuration/../tracer/ebpf/ebpf_tracer_engine.h:6,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/../configuration/procmon_configuration.h:21,
+                 from /home/qgb/github/ProcMon-for-Linux/src/display/event_formatter.h:12,
+                 from /home/qgb/github/ProcMon-for-Linux/src/qgb.cpp:13:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h: In constructor ‘ebpf::BPFSkStorageTable<ValueType>::BPFSkStorageTable(const ebpf::TableDesc&)’:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:509:22: error: ‘BPF_MAP_TYPE_SK_STORAGE’ was not declared in this scope
+     if (desc.type != BPF_MAP_TYPE_SK_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:509:22: note: suggested alternative: ‘BPF_MAP_TYPE_STACK_TRACE’
+     if (desc.type != BPF_MAP_TYPE_SK_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~
+                      BPF_MAP_TYPE_STACK_TRACE
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h: In constructor ‘ebpf::BPFCgStorageTable<ValueType>::BPFCgStorageTable(const ebpf::TableDesc&)’:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:538:22: error: ‘BPF_MAP_TYPE_CGROUP_STORAGE’ was not declared in this scope
+     if (desc.type != BPF_MAP_TYPE_CGROUP_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:538:22: note: suggested alternative: ‘BPF_MAP_TYPE_CGROUP_ARRAY’
+     if (desc.type != BPF_MAP_TYPE_CGROUP_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      BPF_MAP_TYPE_CGROUP_ARRAY
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h: In constructor ‘ebpf::BPFPercpuCgStorageTable<ValueType>::BPFPercpuCgStorageTable(const ebpf::TableDesc&)’:
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:564:22: error: ‘BPF_MAP_TYPE_PERCPU_CGROUP_STORAGE’ was not declared in this scope
+     if (desc.type != BPF_MAP_TYPE_PERCPU_CGROUP_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/qgb/github/ProcMon-for-Linux/build/_deps/bcc-src/src/cc/api/BPFTable.h:564:22: note: suggested alternative: ‘BPF_MAP_TYPE_PERCPU_ARRAY’
+     if (desc.type != BPF_MAP_TYPE_PERCPU_CGROUP_STORAGE)
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      BPF_MAP_TYPE_PERCPU_ARRAY

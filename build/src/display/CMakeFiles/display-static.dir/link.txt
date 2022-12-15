@@ -1,0 +1,2 @@
+/usr/bin/ar qc libdisplay-static.a "CMakeFiles/display-static.dir/screen.cpp.o" "CMakeFiles/display-static.dir/column.cpp.o" "CMakeFiles/display-static.dir/event_formatter.cpp.o" "CMakeFiles/display-static.dir/kill_event_formatter.cpp.o" "CMakeFiles/display-static.dir/headless.cpp.o"
+/usr/bin/ranlib libdisplay-static.a

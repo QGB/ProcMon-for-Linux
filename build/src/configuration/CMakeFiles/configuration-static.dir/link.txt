@@ -1,0 +1,2 @@
+/usr/bin/ar qc libconfiguration-static.a "CMakeFiles/configuration-static.dir/procmon_configuration.cpp.o"
+/usr/bin/ranlib libconfiguration-static.a

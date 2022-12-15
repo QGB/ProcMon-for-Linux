@@ -86,6 +86,7 @@ class Screen {
         void shutdownScreen();
         void refreshScreen();
 
+        EventFormatter* GetFormatter(ITelemetry lineData);
     private:
         // procmon configuration
         std::shared_ptr<ProcmonConfiguration> configPtr;
@@ -165,7 +166,6 @@ class Screen {
         // NOTE: The first element in the vector is always our default formatter with a syscall name of "".
         //       When inserting formatters into this vector always push_back().
         std::vector<EventFormatter*> formatters;
-        EventFormatter* GetFormatter(ITelemetry lineData);
 
         void InitializeFormatters();
 

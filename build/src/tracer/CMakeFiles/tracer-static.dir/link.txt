@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtracer-static.a "CMakeFiles/tracer-static.dir/mock_tracer_engine.cpp.o" "CMakeFiles/tracer-static.dir/ebpf/ebpf_tracer_engine.cpp.o" "CMakeFiles/tracer-static.dir/ebpf/raw_ebpf_event.cpp.o" "CMakeFiles/tracer-static.dir/ebpf/syscall_schema.cpp.o"
+/usr/bin/ranlib libtracer-static.a
