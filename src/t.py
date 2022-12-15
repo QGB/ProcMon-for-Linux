@@ -14,8 +14,9 @@ try:
     print(pyprocmon.add_mockSyscalls("sys_mmap"))
   
     print(pyprocmon.gengine_Initialize())
+    print(pyprocmon.gengine_load('/home/qgb/github/ProcMon-for-Linux/build/p.db'))
 
-    # print(pyprocmon.add(1,3))
+    # print(pyprocmon.add(1,3)) # gengine_load 后 为什么 size 不改变
     # print(pyprocmon.add(1,4))
 
 except Exception as e:print(e)

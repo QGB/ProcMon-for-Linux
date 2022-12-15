@@ -29,6 +29,13 @@ std::string gengine_Initialize() {
     gengine.Initialize(mockSyscalls);
     return "gengine_Initialize";
 }    
+
+int gengine_load(std::string filepath) {
+    gengine.Load(filepath);
+    return gengine.Size();
+}    
+
+
 int add(int i, int j) {
 
     static MockTrace trace;
@@ -61,22 +68,23 @@ int add(int i, int j) {
     // static Sqlite3StorageEngine engine; // 如果语句只到这里，直接退出。不返回, 加 static 就正常了
 	// gengine.Initialize(mockSyscalls); // double free or corruption (!prev) \n Aborted (core dumped)
 
-	// std::vector<MockTelemetry> data;
-	// data.push_back(telemetry);
-	// data.push_back(telemetry);
-	// auto result = gengine.StoreMany(data);//always return 1
-	// auto size=gengine.Size();
-    // auto size=i+j;
-    // return size;
+	std::vector<MockTelemetry> data;
+	data.push_back(telemetry);
+	data.push_back(telemetry);
+	auto result = gengine.StoreMany(data);//always return 1
+	auto size=gengine.Size();
+    return size;
 	// static int size=engine.Size();
     // printf("test end\n"); 
     printf("test end\n"); 
     return 1;
 }
+    // auto size=i+j;
 
 PYBIND11_MODULE(pyprocmon, m) {//模块名必须和文件名相同，否则 ImportError: dynamic module does not define module export function ，并且不能再次导入，除非改名或重启进程
     m.doc() = "pybind11 example plugin"; // optional module docstring
     m.def("add_mockSyscalls", &add_mockSyscalls, "A function which adds two numbers");
     m.def("add", &add, "A function which adds two numbers"); // 定义后就 double free or corruption (!prev)
     m.def("gengine_Initialize", &gengine_Initialize, "A function which adds two numbers");
+    m.def("gengine_load", &gengine_load, "doc");
 }
