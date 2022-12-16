@@ -43,6 +43,8 @@ int add_mockSyscalls(const char *s){
 std::string gengine_Initialize() {
     gengine.Initialize(mockSyscalls);
     // format = display.GetFormatter(telemetry);
+    gformat->Initialize("", nullptr);
+
     return "gengine_Initialize";
 }    
 
@@ -51,7 +53,19 @@ int gengine_load(std::string filepath) {
     return gengine.Size();
 }    
 
+
 #include <sstream>
+
+std::string get_compile_time(){
+    std::stringstream ss;
+    
+    ss <<"get_compile_time "<<__DATE__<<" = "<<__TIME__ <<"";
+    return ss.str();
+    //  printf("date: '%s'\n", );
+    // printf("time: '%s'\n", );
+    // printf("timestamp: '%s'\n", __TIMESTAMP__);
+}
+
 std::vector<ITelemetry> prepareAndGetFromSqlite3(int n){
 
     std::stringstream ss;
@@ -70,9 +84,9 @@ std::string DecodeArguments(ITelemetry event){
     // int   argc   = (int)(sizeof(argv) / sizeof(argv[0])) - 1;
 
     // ProcmonConfiguration * config = new ProcmonConfiguration(argc,argv);
-    gformat->Initialize("", nullptr);
-    auto s = gformat->GetDetails(event);
-    return s;
+    
+    return gformat->GetDetails(event);
+     
     // return gformat->DecodeArguments(event); // .  error: request for member ‘DecodeArguments’ in ‘gformat’, which is of pointer type ‘EventFormatter*’ (maybe you meant to use ‘->’ ?)
 }
 
@@ -152,7 +166,7 @@ int add(int i, int j) {
 PYBIND11_MODULE(pyprocmon, m) {//模块名必须和文件名相同，否则 ImportError: dynamic module does not define module export function ，并且不能再次导入，除非改名或重启进程
     m.doc() = "pybind11 example plugin"; // optional module docstring
     m.def("add_mockSyscalls", &add_mockSyscalls, "A function which adds two numbers");
-    m.def("add", &add, "A function which adds two numbers"); // 定义后就 double free or corruption (!prev)
+    m.def("get_compile_time", &get_compile_time, "get_compile_time");
     m.def("gengine_Initialize", &gengine_Initialize, "A function which adds two numbers");
     m.def("gengine_load", &gengine_load, "doc");
     m.def("prepareAndGetFromSqlite3", &prepareAndGetFromSqlite3, "doc",py::arg("n") = 10);

@@ -6,6 +6,7 @@
 #include "errno.h"
 #include <iomanip>
 
+std::vector<struct SyscallSchema::SyscallSchema> schema = ::SyscallSchema::Utils::CollectSyscallSchema();// config->GetSchema();
 
 std::string EventFormatter::GetTimestamp(ITelemetry &event)
 {
@@ -87,8 +88,6 @@ std::string EventFormatter::CalculateDeltaTimestamp(uint64_t ebpfEventTimestamp)
 std::string EventFormatter::DecodeArguments(ITelemetry &event)
 {
     std::string args = "";
-
-    std::vector<struct SyscallSchema::SyscallSchema> schema = ::SyscallSchema::Utils::CollectSyscallSchema();// config->GetSchema();
 
     // Find the schema item
     int index = FindSyscall(event.syscall);
@@ -209,7 +208,7 @@ std::string EventFormatter::DecodeArguments(ITelemetry &event)
 
 int EventFormatter::FindSyscall(std::string& syscallName)
 {
-    std::vector<struct SyscallSchema::SyscallSchema> schema = ::SyscallSchema::Utils::CollectSyscallSchema();// config->GetSchema();
+    // std::vector<struct SyscallSchema::SyscallSchema> schema = ::SyscallSchema::Utils::CollectSyscallSchema();// config->GetSchema();
 
     int i = 0;
     for(auto& syscall : schema)

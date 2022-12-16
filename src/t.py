@@ -8,17 +8,18 @@ try:
 except Exception as e:print(e)
 try:
     import pyprocmon;print(pyprocmon)
-    print(pyprocmon.add_mockSyscalls("sys_write"))
-    print(pyprocmon.add_mockSyscalls("sys_read"))
-    print(pyprocmon.add_mockSyscalls("sys_open"))
-    print(pyprocmon.add_mockSyscalls("sys_mmap"))
+    print(pyprocmon.get_compile_time())
+    # print(pyprocmon.add_mockSyscalls("sys_write"))
+    # print(pyprocmon.add_mockSyscalls("sys_read"))
+    # print(pyprocmon.add_mockSyscalls("sys_open"))
+    # print(pyprocmon.add_mockSyscalls("sys_mmap"))
   
     print(pyprocmon.gengine_Initialize())
     print(pyprocmon.gengine_load('/home/qgb/github/ProcMon-for-Linux/build/p.db'))
 
     print('pyprocmon.b()',pyprocmon.b())#std::string s("\x00\x01\x02")  return b'' ?
-    print('pyprocmon.pointerSyscalls()',pyprocmon.pointerSyscalls())
-    print('pyprocmon.CollectSyscallSchema()',pyprocmon.CollectSyscallSchema())
+    # print('pyprocmon.pointerSyscalls()',pyprocmon.pointerSyscalls())
+    # print('pyprocmon.CollectSyscallSchema()',pyprocmon.CollectSyscallSchema())
 
     ts=pyprocmon.prepareAndGetFromSqlite3(3)
     print(ts,)
