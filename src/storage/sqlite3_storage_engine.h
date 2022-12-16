@@ -30,7 +30,6 @@ private:
 
     std::string addSyscallFilterToSQLQuery(const std::string initialQuery, std::vector<Event> events, const bool first);
 
-    void prepareAndGetFromSqlite3(const std::string raw_sql_statement, std::vector<ITelemetry>& results);
     void prepareAndGetIdsFromSqlite3(const std::string raw_sql_statement, std::vector<int>& results);
 
     ITelemetry parseSqlite3Row(sqlite3_stmt *preppedSqlStmt);
@@ -41,6 +40,8 @@ private:
 public:
     Sqlite3StorageEngine(): ready(false) {};
     ~Sqlite3StorageEngine();
+    
+    void prepareAndGetFromSqlite3(const std::string raw_sql_statement, std::vector<ITelemetry>& results);//qgb protected
     
     bool Initialize(const std::vector<Event>& syscalls) override;
 

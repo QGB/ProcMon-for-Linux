@@ -34,7 +34,7 @@ std::string EventFormatter::GetDuration(ITelemetry &event)
 
 std::string EventFormatter::GetResult(ITelemetry &event)
 {
-    std::vector<std::string> pointerSycalls = config->getPointerSyscalls();
+    std::vector<std::string> pointerSycalls = ::SyscallSchema::Utils::Linux64PointerSycalls;// config-> pointerSyscalls
     if(event.result >= 0)
     {
         for(int i = 0; i < pointerSycalls.size(); i++)
@@ -65,7 +65,7 @@ std::string EventFormatter::CalculateDeltaTimestamp(uint64_t ebpfEventTimestamp)
     std::string deltaTimestamp;
 
     // calculate delta from beginning of procmon for timestamp column
-    uint64_t delta = ebpfEventTimestamp - (config->GetStartTime());
+    uint64_t delta = ebpfEventTimestamp - (0 ); // config->GetStartTime()
 
 
     unsigned hour = delta / 3600000000000;
@@ -88,7 +88,7 @@ std::string EventFormatter::DecodeArguments(ITelemetry &event)
 {
     std::string args = "";
 
-    std::vector<struct SyscallSchema::SyscallSchema>& schema = config->GetSchema();
+    std::vector<struct SyscallSchema::SyscallSchema> schema = ::SyscallSchema::Utils::CollectSyscallSchema();// config->GetSchema();
 
     // Find the schema item
     int index = FindSyscall(event.syscall);
@@ -209,7 +209,7 @@ std::string EventFormatter::DecodeArguments(ITelemetry &event)
 
 int EventFormatter::FindSyscall(std::string& syscallName)
 {
-    std::vector<struct SyscallSchema::SyscallSchema>& schema = config->GetSchema();
+    std::vector<struct SyscallSchema::SyscallSchema> schema = ::SyscallSchema::Utils::CollectSyscallSchema();// config->GetSchema();
 
     int i = 0;
     for(auto& syscall : schema)
